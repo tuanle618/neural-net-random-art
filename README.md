@@ -1,6 +1,6 @@
 # neural-net-random-art
 Create a grayscale or colour image with predefined size `image_height` and `image_width` using fully connected neural networks.  
-The generation of images only requires python NumPy.
+The generation of images only requires python `numpy` and `matplotlib`.
 
 # Usage
 You can either have a look at the jupyter notebook [nb_random_art.ipynb](https://github.com/tuanle618/neural-net-random-art/blob/master/nb_random_art.ipynb) if you want to understand the algorithm and check out several settings of the method.  
