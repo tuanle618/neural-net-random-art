@@ -101,8 +101,13 @@ E.g, leading to following 2 random images (resized in order to have next to each
   <img src="https://github.com/tuanle618/neural-net-random-art/blob/master/results/HSL_generated3.png" width="420" /> 
 </p>
   
-  
-You can try out different input arguments (larger networks and neurons, different actiation functions etc..) as suggested in the Jupyter Notebook, to see what images will be created.
+You can try out different input arguments (larger networks and neurons, different actiation functions etc..) as suggested in the Jupyter Notebook, to see what images will be created.  
+For example the following images are created by deeper neural nets.  
+Image 1: `n_depth=15` and `n_size=25`, Image 2: `n_depth=25` and `n_size=45`:
+<p float="left">
+  <img src="https://github.com/tuanle618/neural-net-random-art/blob/master/results/deepRGB.png" width="420" />
+  <img src="https://github.com/tuanle618/neural-net-random-art/blob/master/results/verydeepRGB.png" width="420" />
+</p>
 
 # License
 Code under MIT License.
