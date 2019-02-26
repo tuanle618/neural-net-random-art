@@ -47,7 +47,7 @@ args = parser.parse_args()
 So in order to create 1 RGB image of size 400x500, no alpha channel, a dense net with 15 layers, each laying having 15 neurons, type in following command in the shell:  
 
 `
-python random_art.py -img_height 400 -image_width 500 -colormode RGB -alpha False -n_images 1 -n_depth 15 -n_size 15
+python random_art.py -img_height 400 -img_width 500 -colormode RGB -alpha False -n_images 1 -n_depth 15 -n_size 15
 `
 
 # Examples
@@ -62,7 +62,7 @@ E.g, leading to following 2 random images (resized in order to have next to each
 </p>  
   
 ```
-python random_art.py -img_height 512 -image_width 512 -colormode RGB -alpha False -n_images 10
+python random_art.py -img_height 512 -img_width 512 -colormode RGB -alpha False -n_images 10
 ```
 
 E.g, leading to following 2 random images (resized in order to have next to each other):  
@@ -72,7 +72,7 @@ E.g, leading to following 2 random images (resized in order to have next to each
 </p>
   
 ```
-python random_art.py -img_height 512 -image_width 512 -colormode CYMYK -alpha False -n_images 5
+python random_art.py -img_height 512 -img_width 512 -colormode CYMYK -alpha False -n_images 5
 ```
 
 E.g, leading to following 2 random images (resized in order to have next to each other):  
@@ -82,7 +82,7 @@ E.g, leading to following 2 random images (resized in order to have next to each
 </p>
 
 ```
-python random_art.py -img_height 512 -image_width 512 -colormode HSV -alpha False -n_images 5
+python random_art.py -img_height 512 -img_width 512 -colormode HSV -alpha False -n_images 5
 ```
 
 E.g, leading to following 2 random images (resized in order to have next to each other):  
@@ -92,7 +92,7 @@ E.g, leading to following 2 random images (resized in order to have next to each
 </p>
 
 ```
-python random_art.py -img_height 512 -image_width 512 -colormode HSL -alpha False -n_images 5
+python random_art.py -img_height 512 -img_width 512 -colormode HSL -alpha False -n_images 5
 ```
 
 E.g, leading to following 2 random images (resized in order to have next to each other):  
