@@ -228,7 +228,7 @@ def prep_nnet_arch(n_depth, n_size, activation, colormode, alpha):
     return layers, activations_fnc   
 
 def generate_image(img_height, img_width, n_depth, n_size, activation, colormode, alpha, z1, z2,
-                   fname="netart.png", nnet_dict=None, save=False, show=False):
+                   fname="netart.png", nnet_dict=None, save=False, show=False, symmetry=False):
     factor = min(img_height, img_width)
     if nnet_dict is None:
         layers, activations_fnc = prep_nnet_arch(n_depth, n_size, activation, colormode, alpha)
@@ -246,9 +246,16 @@ def generate_image(img_height, img_width, n_depth, n_size, activation, colormode
     img = init_image(img_height, img_width)
     for i in range(img_height):
         for j in range(img_width):
-            x = i/factor - 0.5
-            y = j/factor - 0.5
-            r_ = np.sqrt(x*x + y*y)
+            x = (i/factor - 0.5)*2
+            y = (j/factor - 0.5)*2
+            if symmetry:
+                x = x**2
+                y = y**2
+                #r_ = 0
+                ## Uncomment z1 and/or z2 to add trigonometric functions
+                #z1 = np.cos(z1*x)
+                #z2 = np.sin(z2*y)
+            r_ = np.sqrt(x**2 + y**2)
             #Get RGBA values
             r, g, b, a = get_color_at(nnet, x=x, y=y, r=r_,
                                    z1=z1, z2=z2, colormode=colormode, alpha=alpha)
@@ -307,6 +314,8 @@ def args_parser():
         
     parser.add_argument("-z2", metavar="", type=float, default=+0.618,
                         help="Input variable 2 to insert determinism into the random art. The value should be between -1 and 1. Default is +0.618")
+    parser.add_argument("-sym", metavar="", type=str, default="False",
+                        help="Use symmetry network. Default is False")
 
     args = parser.parse_args()
     
@@ -366,6 +375,7 @@ def main():
     activation = args.activation
     z1 = args.z1
     z2 = args.z2
+    symmetry = str_to_bool(args.sym)
     
     if not os.path.exists("results"):
         print("Creating subdirectory 'results'.")
@@ -376,7 +386,7 @@ def main():
         print("Generating image number {}...".format(i+1))
         save_path = "results/{}_generated{}.png".format(colormode, i+1)
         generate_image(img_height, img_width, n_depth, n_size, activation, colormode, alpha, z1, z2,
-                       fname=save_path, save=True, show=False)
+                       fname=save_path, save=True, show=False, symmetry=symmetry)
         delta = time.time()-start_time
         print("Generating image took {} seconds".format(delta))
         print("Image number {} saved at {}".format(i+1, save_path))
