@@ -7,7 +7,8 @@ You can either have a look at the jupyter notebook [nb_random_art.ipynb](https:/
 For fast image generation is is recommended to use the python main programm file [random_art.py](https://github.com/tuanle618/neural-net-random-art/blob/master/random_art.py)
 
 # Using Google Colab
-I've created a minimal working example on Google Colab here: https://colab.research.google.com/drive/1TFmQQOUHOPjSrB0dVeoYiD7d7FPidilW?usp=sharing in case you want to experiment with this library a little bit, prior to installing it on your local machine.
+I've created a minimal working example on Google Colab here [here](https://colab.research.google.com/drive/1TFmQQOUHOPjSrB0dVeoYiD7d7FPidilW?usp=sharing) in case you want to experiment with this library a little bit, prior to installing it on your local machine.  
+To generate an animation by applying small gradual changes in the neural net when generating consecutive new images, check out this [notebook](https://colab.research.google.com/drive/1Jdmvh72NsQlb0GdXdhgBDMfiNm5Q8WUe?usp=sharing).
 
 # Dependencies: Python 3
 ```
