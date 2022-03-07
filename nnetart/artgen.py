@@ -161,7 +161,7 @@ def hsl_to_rgb_torch(h: torch.Tensor, s: torch.Tensor, l: torch.Tensor):
     h = h.cpu().data.numpy()
     s = s.cpu().data.numpy()
     l = l.cpu().data.numpy()
-    with Pool(processes=mp.cpu_count() - 2) as pool:
+    with Pool(processes=2) as pool:
         proc_img = pool.starmap(hsl_to_rgb, zip(h, s, l))
     proc_img = torch.Tensor(proc_img)
     return proc_img
