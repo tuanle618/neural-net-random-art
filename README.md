@@ -6,6 +6,9 @@ Medium article can be found [here](https://medium.com/@tuanle618/generate-abstra
 You can either have a look at the jupyter notebook [nb_random_art.ipynb](https://github.com/tuanle618/neural-net-random-art/blob/master/nb_random_art.ipynb) if you want to understand the algorithm and check out several settings of the method.  
 For fast image generation is is recommended to use the python main programm file [random_art.py](https://github.com/tuanle618/neural-net-random-art/blob/master/random_art.py)
 
+# Using Google Colab
+I've created a minimal working example on Google Colab here: https://colab.research.google.com/drive/1TFmQQOUHOPjSrB0dVeoYiD7d7FPidilW?usp=sharing in case you want to experiment with this library a little bit, prior to installing it on your local machine.
+
 # Dependencies: Python 3
 ```
 numpy
