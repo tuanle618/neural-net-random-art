@@ -26,7 +26,7 @@ def generate_image_torch(my_net: FeedForwardNetwork = FeedForwardNetwork(),
                          symmetry=False,
                          trig=True,
                          colormode="rgb",
-                         alpha=False,
+                         alpha=True,
                          z1=-0.618, z2=0.618,
                          show=True,
                          fname="netart",
@@ -59,7 +59,7 @@ def generate_image_torch(my_net: FeedForwardNetwork = FeedForwardNetwork(),
     if show:
         plt.show()
     if save:
-        plt.imsave(f"{fname}.{format}", img, format=format)
+        plt.imsave(f"{fname}", img, format=format)
     return img
 
 
@@ -76,8 +76,8 @@ def args_parser():
                         help="How image color should be generated. Options are ['bw', 'rgb', 'cmyk', 'hsv', 'hsl']."
                              " By default this value is 'rgb'")
         
-    parser.add_argument("-alpha", metavar="", type=str, default="False",
-                        help="Whether or not to add a alpha channel for the image. Default is False")
+    parser.add_argument("-alpha", metavar="", type=str, default="True",
+                        help="Whether or not to add a alpha channel for the image. Default is True")
     
     parser.add_argument("-n_images", metavar="", type=int, default=1,
                         help="Number of images to generate. Default is 1")

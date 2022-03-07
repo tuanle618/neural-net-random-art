@@ -14,6 +14,9 @@ from typing import List
 
 
 def weights_init_normal(m: nn.Module):
+    """
+    Change the standard deviations for the weight-attribute if you wanna experiment further.
+    """
     classname = m.__class__.__name__
     if classname.find('Linear') != -1:
         m.weight.data.normal_(0.0, 1.0)

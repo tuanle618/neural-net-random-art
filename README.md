@@ -1,5 +1,5 @@
 # neural-net-random-art
-Create a grayscale or colour image with predefined size `image_height` and `image_width` using fully connected neural networks.  
+Create a grayscale or colour image with predefined size `img_height` and `img_width` using fully connected neural networks.  
 The generation of images only requires python `numpy`, `torch` and `matplotlib`.  
 Medium article can be found [here](https://medium.com/@tuanle618/generate-abstract-random-art-with-a-neural-network-ecef26f3dd5f).
 # Usage
@@ -148,6 +148,11 @@ Image 1: `n_depth=15` and `n_size=25`, Image 2: `n_depth=25` and `n_size=45`:
   <img src="https://github.com/tuanle618/neural-net-random-art/blob/master/results/deepRGB.png" width="420" />
   <img src="https://github.com/tuanle618/neural-net-random-art/blob/master/results/verydeepRGB.png" width="420" />
 </p>
+
+------
+
+### If you like this repo, feel free to ⭐ and share it!
+
 
 # License
 Code under MIT License.
